@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      6490,        173]
-NotebookOptionsPosition[      5256,        143]
-NotebookOutlinePosition[      5652,        159]
-CellTagsIndexPosition[      5609,        156]
+NotebookDataLength[      6948,        186]
+NotebookOptionsPosition[      5805,        157]
+NotebookOutlinePosition[      6201,        173]
+CellTagsIndexPosition[      6158,        170]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -41,32 +41,38 @@ Cell["Data Loading", "Subsection",
   3.877882061508025*^9}},ExpressionUUID->"94903ccb-4645-43a4-b5e5-\
 28857714dfcf"],
 
-Cell[BoxData[
+Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"ds", " ", "=", " ", 
     RowBox[{"Import", "[", 
      RowBox[{
      "\"\<https://raw.githubusercontent.com/scalabrindario/predicting-climate-\
-risks/main/data/dataset_sample.csv?token=\
-GHSAT0AAAAAABY7YCT23GEHFVSIKKCBTMQQY3ZORZQ\>\"", ",", " ", "\"\<Dataset\>\"", 
-      ",", " ", 
+risks/b01_development/data/dataset_sample.csv\>\"", ",", " ", 
+      "\"\<Dataset\>\"", ",", " ", 
       RowBox[{"\"\<HeaderLines\>\"", " ", "\[Rule]", " ", "1"}]}], "]"}]}], 
    ";"}], 
   RowBox[{"(*", 
-   RowBox[{"Import", " ", "dataset", " ", "sample"}], "*)"}]}]], "Input",
- CellChangeTimes->{{3.877882155173353*^9, 3.877882233086768*^9}, {
-  3.877889276711831*^9, 3.877889320051159*^9}, {3.877889368631003*^9, 
-  3.8778893690756893`*^9}},ExpressionUUID->"fc7511cd-d7b9-430d-bc85-\
-259db4bc506b"],
-
-Cell[BoxData[
+   RowBox[{"Import", " ", "dataset", " ", "sample"}], 
+   "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"RandomSample", "[", 
-   RowBox[{"ds", ",", " ", "5"}], "]"}], ";"}]], "Input",
- CellChangeTimes->{{3.877889928997756*^9, 3.87788995667595*^9}, 
-   3.8778900328120327`*^9},
- CellLabel->"In[15]:=",ExpressionUUID->"c0dcfe51-8d51-4741-ba22-2f1b3653d2c3"]
+  RowBox[{
+   RowBox[{"comp", " ", "=", " ", 
+    RowBox[{"Import", "[", 
+     RowBox[{
+     "\"\<https://raw.githubusercontent.com/scalabrindario/predicting-climate-\
+risks/b01_development/data/company_information.csv\>\"", ",", " ", 
+      "\"\<Dataset\>\"", ",", " ", 
+      RowBox[{"\"\<HeaderLines\>\"", " ", "\[Rule]", " ", "1"}]}], "]"}]}], 
+   ";"}], 
+  RowBox[{"(*", 
+   RowBox[{"Import", " ", "company", " ", "information"}], "*)"}]}]}], "Input",\
+
+ CellChangeTimes->{{3.877882155173353*^9, 3.877882233086768*^9}, {
+   3.877889276711831*^9, 3.877889320051159*^9}, {3.877889368631003*^9, 
+   3.8778893690756893`*^9}, 3.8784898834160337`*^9, {3.878489924575973*^9, 
+   3.878489955668668*^9}, {3.878490108390555*^9, 3.878490113641554*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"fc7511cd-d7b9-430d-bc85-259db4bc506b"]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -127,16 +133,24 @@ Cell[BoxData[{
    RowBox[{"Rename", " ", "columns", " ", "name"}], 
    "*)"}]}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"RandomSample", "[", 
-   RowBox[{"ds", ",", " ", "5"}], "]"}], ";"}]}], "Input",
+  RowBox[{
+   RowBox[{"comp", " ", "=", " ", 
+    RowBox[{
+     RowBox[{"KeyDrop", "[", 
+      RowBox[{"{", "\"\<\>\"", "}"}], "]"}], "@", "comp"}]}], ";"}], " ", 
+  RowBox[{"(*", 
+   RowBox[{"Drop", " ", "emtpy", " ", "column"}], 
+   "*)"}]}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.877882155173353*^9, 3.877882233086768*^9}, {
    3.877889276711831*^9, 3.877889320051159*^9}, {3.877889368631003*^9, 
    3.8778893690756893`*^9}, {3.8778894126624193`*^9, 3.877889423407289*^9}, {
    3.877889459383305*^9, 3.8778894845215483`*^9}, {3.877889566017929*^9, 
    3.877889588273754*^9}, {3.877889627649275*^9, 3.877889817726323*^9}, {
    3.877889863794015*^9, 3.877889867382916*^9}, {3.877889963648498*^9, 
-   3.8778899642708073`*^9}, 3.877890035751668*^9},
- CellLabel->"In[16]:=",ExpressionUUID->"64e06684-09ba-41b9-8f8e-61ae4922557f"]
+   3.8778899642708073`*^9}, 3.877890035751668*^9, {3.8784901464207277`*^9, 
+   3.878490159646762*^9}, 
+   3.8784902110953283`*^9},ExpressionUUID->"64e06684-09ba-41b9-8f8e-\
+61ae4922557f"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
@@ -166,12 +180,11 @@ Cell[CellGroupData[{
 Cell[893, 30, 219, 4, 67, "Section",ExpressionUUID->"7dace181-d0f9-4283-b4a9-94e43c143822"],
 Cell[CellGroupData[{
 Cell[1137, 38, 160, 3, 54, "Subsection",ExpressionUUID->"94903ccb-4645-43a4-b5e5-28857714dfcf"],
-Cell[1300, 43, 730, 17, 73, "Input",ExpressionUUID->"fc7511cd-d7b9-430d-bc85-259db4bc506b"],
-Cell[2033, 62, 285, 6, 30, "Input",ExpressionUUID->"c0dcfe51-8d51-4741-ba22-2f1b3653d2c3"]
+Cell[1300, 43, 1321, 31, 94, "Input",ExpressionUUID->"fc7511cd-d7b9-430d-bc85-259db4bc506b"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[2355, 73, 210, 4, 54, "Subsection",ExpressionUUID->"35896a36-bc89-45d7-aa4c-67e8432be11c"],
-Cell[2568, 79, 2648, 59, 212, "Input",ExpressionUUID->"64e06684-09ba-41b9-8f8e-61ae4922557f"]
+Cell[2658, 79, 210, 4, 54, "Subsection",ExpressionUUID->"35896a36-bc89-45d7-aa4c-67e8432be11c"],
+Cell[2871, 85, 2894, 67, 178, "Input",ExpressionUUID->"64e06684-09ba-41b9-8f8e-61ae4922557f"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
