@@ -187,7 +187,7 @@ if uploaded_file is not None:
 else:
 	st.info(
 	    f"""
-	        👆 Upload a .csv file first. Sample to try: [portfolio.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/biostats.csv)
+	        👆 Upload a .csv file first. Sample to try: [portfolio.csv](https://drive.google.com/uc?export=download&id=1-KTlI3biZg5-UpU2pwXicLlu_I3k-1nv)
 	        """
 	)
 
