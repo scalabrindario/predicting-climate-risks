@@ -88,10 +88,10 @@ if uploaded_file is not None:
 	def conversion_rat_score(rating):
 		converted_list = []
 		for i in rating:
-	        if i == "A":
+			if i == "A":
 	            converted_list.append(0.1)
 	        elif i == "B":
-	            converted_list.append(0.3)
+	        	converted_list.append(0.3)
 	        elif i == "C":
 	            converted_list.append(0.5)
 	        elif i == "D":
