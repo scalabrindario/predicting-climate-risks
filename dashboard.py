@@ -86,8 +86,8 @@ if uploaded_file is not None:
 
     # Convert the ratings in numerical values
 	def conversion_rat_score(rating):
-	    converted_list = []
-	    for i in rating:
+		converted_list = []
+		for i in rating:
 	        if i == "A":
 	            converted_list.append(0.1)
 	        elif i == "B":
@@ -102,7 +102,7 @@ if uploaded_file is not None:
 	
     # Convert numerical values in ratings
     def conversion_score_rat(score):
-	    if 0.0 <= score <= 0.2:
+    	if 0.0 <= score <= 0.2:
 	        return ("A")
 	    elif 0.2 <= score <= 0.4:
 	        return ("B")
