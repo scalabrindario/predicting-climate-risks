@@ -80,7 +80,7 @@ Next, we created a API, that can be called at [this link](https://www.wolframclo
 
 ```
 
-## Dashbboard :computer:
+## Dashboard :computer:
 Finally, we created an interactive dashboard, available at [this link](https://pred-climate-risks.streamlit.app). It has been been built using the [Streamlit](https://streamlit.io) library, and it takes as input a CSV file of a portfolio. The dashboard script calls the Wolfram API (defined in the previous section), it predicts the physical risk of all the companies in the portfolio, and it compute the weighted risk of the portfolio. Next, it shows relevant information of the given portoflio (e.g. summary statistics, distribution, sectorial analysis)
 
 ## Authors :technologist:
