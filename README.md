@@ -28,7 +28,7 @@ The model ouptut of the Physical Risk of one company, which can span from A to E
 
 In order to do so, for each asset of each company, we took the Composite Physical Risk Score (i.e., an equal weighted additive combination of the company physical risk score on each indicator for a given scenario and year) and we computed the integral score as follows:
 
-Let $f:$ $\mathbb{R} \to \mathbb{R} $, be the linear regression of the composite score $C_t$ for $t \in \{2020, \dots 2090\}$
+Let $f:$ $\mathbb{R} \to \mathbb{R} $, be the linear regression of the pointcloud of composite scores $C_t$ for $t \in \{2020, \dots 2090\}$
 
 $$  I = \int_{2020}^{2100} f(t) dt.  $$
 
@@ -82,6 +82,9 @@ Next, we created a API, that can be called at [this link](https://www.wolframclo
 
 ## Dashboard :computer:
 Finally, we created an interactive dashboard, available at [this link](https://pred-climate-risks.streamlit.app). It has been been built using the [Streamlit](https://streamlit.io) library, and it takes as input a CSV file of a portfolio. The dashboard script calls the Wolfram API (defined in the previous section), it predicts the physical risk of all the companies in the portfolio, and it compute the weighted risk of the portfolio. Next, it shows relevant information of the given portoflio (e.g. summary statistics, distribution, sectorial analysis)
+
+## Video :tv:
+Check out [this video](https://www.youtube.com/watch?v=syDAWPQFnSc) to go deeper into the code.
 
 ## Authors :technologist:
 
