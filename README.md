@@ -30,7 +30,7 @@ The model ouptut of the Physical Risk of one company, which can span from A to E
 
 In order to do so, for each asset of each company, we took the Composite Physical Risk Score (i.e., an equal weighted additive combination of the company physical risk score on each indicator for a given scenario and year) and we computed the integral score as follows:
 
-Let $f:$ $\mathbb{R} \to \mathbb{R} $, be the linear regression of the pointcloud of composite scores $C_t$ for $t \in \{2020, \dots 2090\}$
+Let $f:$ $\mathbb{R} \to \mathbb{R} $, be the linear regression of the pointcloud of composite scores $C_t$ for $t \in \lbrace2020, \dots 2090\rbrace$
 
 $$  I = \int_{2020}^{2100} f(t) dt.  $$
 
