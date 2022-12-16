@@ -14,6 +14,8 @@ For this project, we used [Trucost](https://www.marketplace.spglobal.com/en/data
 
 Trucost also provides "intermediate" scenarios, and for each of them the exposure score for each extreme event for the period 2020-2090. We decided to select Moderate-High scenario, because with the current policies it is the most likely to happen. 
 
+As Trucost data cannot publicly disclosed, the complete dataset is not present in this repository. However, the interested used can contact the authors for more insights. 
+
 ## Development :wrench:
 Our final model takes as a input:
 - Sector
